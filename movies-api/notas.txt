@@ -1,0 +1,27 @@
+Pasos para un proyecto nuevo.
+
+1. se crea el package.json con el comando: 
+    npm init -y, el último comando '-y' es para que todas las confguraciones inicien por default
+
+2. Se crean los archivos:
+    a. eslintrc.json: configuraciones del formato
+    b. prettierrc.json: para dar formato a código.
+
+3. modulos a instalar con npm i
+    a. express: Framework de desarrollo.
+    b. dotenv: variables de entorno.
+
+4. modulos a instalar com ambiente de desarrollo tipando con el comando: 
+    npm i -D, el último comando '-D' es para indicar que solo se instale en desarrollo y que el paso a pod sea mas liviano
+    a. nodemon: modulo para que el server se refresque o reinicie cuando se hace un cambio en la app
+    b. eslint: este modulo mas el siguiente son necesario para que se aplique la configuración de los archivos eslintrc.json y prettierrc.json en el proyecto
+    c. eslint-config-prettier: ídem
+    d. eslint-plugin-prettier: ídem
+    e. prettier: ídem
+
+5. Para que el codigo haga el formateo automatico cada vez que se haga commit y se suba al repo se debe instalar el siguiente hook:
+    npx mrm lint-staged
+
+6. Luego se crea un nuevo archivo de configuración config/index.js para que si el dia de mañana se carguen las variables de entorno de otra manera se haga mucho más rápido cambiando solo el archivo de configuración
+
+7. luego se crea el servidor en el archivo ./index.js
